@@ -6,3 +6,52 @@ class Cowsay(Template):
     """
     ALIASES = ['cowsay']
     FILTERS_USED = ['cowsay', 'jinja']
+
+class Pygments(Template):
+    """
+    Applies the pygments filter.
+    """
+    ALIASES = ['pygments']
+    FILTERS_USED = ['pyg']
+
+class PygmentsStylesheets(Template):
+    """
+    How to generate stylesheets for use with pygments.
+    """
+    ALIASES = ['pygments-stylesheets']
+    FILTERS_USED = ['pyg']
+
+class PygmentsImage(Template):
+    """
+    How to use the image output formats from pygments.
+    """
+    ALIASES = ['pygments-image']
+    FILTERS_USED = ['pyg', 'gn', 'jn', 'pn']
+
+class Markdown(Template):
+    """
+    Convert markdown to HTML.
+    """
+    ALIASES = ['markdown']
+    FILTERS_USED = ['markdown']
+
+class Figlet(Template):
+    """
+    Makes a figlet out of text.
+    """
+    ALIASES = ['figlet']
+    FILTERS_USED = ['figlet']
+
+class Abc(Template):
+    """
+    Shows how to generate a .pdf from .abc music notation file.
+    """
+    ALIASES = ['abc']
+    FILTERS_USED = ['abc']
+
+class Regetron(Template):
+    """
+    Shows how to use regetron.
+    """
+    ALIASES = ['regetron']
+    FILTERS_USED = ['regetron']
