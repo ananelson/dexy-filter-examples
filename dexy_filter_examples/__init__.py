@@ -28,6 +28,14 @@ class PygmentsImage(Template):
     ALIASES = ['pygments-image']
     FILTERS_USED = ['pyg', 'gn', 'jn', 'pn']
 
+    @classmethod
+    def is_active(klass):
+        try:
+            import PIL
+            return True
+        except ImportError:
+            return False
+
 class Markdown(Template):
     """
     Convert markdown to HTML.
