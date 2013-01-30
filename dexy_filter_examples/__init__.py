@@ -12,14 +12,14 @@ class Pygments(Template):
     Applies the pygments filter.
     """
     ALIASES = ['pygments']
-    FILTERS_USED = ['pyg']
+    FILTERS_USED = ['pyg', 'shint', 'idio', 'l']
 
 class PygmentsStylesheets(Template):
     """
     How to generate stylesheets for use with pygments.
     """
     ALIASES = ['pygments-stylesheets']
-    FILTERS_USED = ['pyg']
+    FILTERS_USED = ['pyg', 'shint', 'idio']
 
 class PygmentsImage(Template):
     """
@@ -41,7 +41,7 @@ class Markdown(Template):
     Convert markdown to HTML.
     """
     ALIASES = ['markdown']
-    FILTERS_USED = ['markdown']
+    FILTERS_USED = ['markdown', 'jinja', 'pyg']
 
 class Figlet(Template):
     """
@@ -55,7 +55,7 @@ class Abc(Template):
     Shows how to generate a .pdf from .abc music notation file.
     """
     ALIASES = ['abc']
-    FILTERS_USED = ['abc']
+    FILTERS_USED = ['abc', 'h']
 
 class Regetron(Template):
     """
@@ -63,3 +63,10 @@ class Regetron(Template):
     """
     ALIASES = ['regetron']
     FILTERS_USED = ['regetron']
+
+class ReStructuredText(Template):
+    """
+    Shows how to convert ReST using various filters.
+    """
+    ALIASES = ['rst']
+    FILTERS_USED = ['rstdocparts', 'rst', 'rstbody', 'latex']
