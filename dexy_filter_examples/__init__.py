@@ -4,29 +4,29 @@ class Cowsay(Template):
     """
     Run the cowsay filter with various options.
     """
-    ALIASES = ['cowsay']
-    FILTERS_USED = ['cowsay', 'jinja']
+    aliases = ['cowsay']
+    filters_used = ['cowsay', 'jinja']
 
 class Pygments(Template):
     """
     Applies the pygments filter.
     """
-    ALIASES = ['pygments']
-    FILTERS_USED = ['pyg', 'shint', 'idio', 'l']
+    aliases = ['pygments']
+    filters_used = ['pyg', 'shint', 'idio', 'l']
 
 class PygmentsStylesheets(Template):
     """
     How to generate stylesheets for use with pygments.
     """
-    ALIASES = ['pygments-stylesheets']
-    FILTERS_USED = ['pyg', 'shint', 'idio']
+    aliases = ['pygments-stylesheets']
+    filters_used = ['pyg', 'shint', 'idio']
 
 class PygmentsImage(Template):
     """
     How to use the image output formats from pygments.
     """
-    ALIASES = ['pygments-image']
-    FILTERS_USED = ['pyg', 'gn', 'jn', 'pn']
+    aliases = ['pygments-image']
+    filters_used = ['pyg', 'gn', 'jn', 'pn']
 
     @classmethod
     def is_active(klass):
@@ -40,33 +40,47 @@ class Markdown(Template):
     """
     Convert markdown to HTML.
     """
-    ALIASES = ['markdown']
-    FILTERS_USED = ['markdown', 'jinja', 'pyg']
+    aliases = ['markdown']
+    filters_used = ['markdown', 'jinja', 'pyg']
 
 class Figlet(Template):
     """
     Makes a figlet out of text.
     """
-    ALIASES = ['figlet']
-    FILTERS_USED = ['figlet']
+    aliases = ['figlet']
+    filters_used = ['figlet']
 
 class Abc(Template):
     """
     Shows how to generate a .pdf from .abc music notation file.
     """
-    ALIASES = ['abc']
-    FILTERS_USED = ['abc', 'h']
+    aliases = ['abc']
+    filters_used = ['abc', 'h']
 
 class Regetron(Template):
     """
     Shows how to use regetron.
     """
-    ALIASES = ['regetron']
-    FILTERS_USED = ['regetron']
+    aliases = ['regetron']
+    filters_used = ['regetron']
 
 class ReStructuredText(Template):
     """
     Shows how to convert ReST using various filters.
     """
-    ALIASES = ['rst']
-    FILTERS_USED = ['rstdocparts', 'rst', 'rstbody', 'latex']
+    aliases = ['rst']
+    filters_used = ['rstdocparts', 'rst', 'rstbody', 'latex']
+
+class HtmlSections(Template):
+    """
+    Split a HTML document up into sections based on comments.
+    """
+    aliases = ['htmlsections']
+    filters_used = ['htmlsections', 'jinja']
+
+class PhRender(Template):
+    """
+    Use phantom js to render HTML to an image
+    """
+    aliases = ['phrender']
+    filters_used = ['phrender']

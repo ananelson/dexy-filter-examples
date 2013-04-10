@@ -22,11 +22,11 @@ setup(
         description='Filter example templates.',
         include_package_data = True,
         install_requires = [
-            'dexy>=0.9.1',
+            'dexy>=0.9.9',
             'Markdown'
             ],
         name='dexy_filter_examples',
         packages=find_packages(),
         url='http://dexy.it',
-        version="0.0.1"
+        version="0.0.2"
         )
