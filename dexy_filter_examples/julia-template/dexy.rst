@@ -1,7 +1,7 @@
 Julia Examples
 --------------
 
-The website for julia is `julialang <julialang.org>`__.
+The website for julia is `julialang <http://julialang.org>`__.
 
 Here is some julia code::
 
