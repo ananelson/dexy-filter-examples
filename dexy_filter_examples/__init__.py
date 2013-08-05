@@ -7,6 +7,13 @@ class Julia(Template):
     aliases = ['julia']
     filters_used = ['julia', 'jinja']
 
+class Matlab(Template):
+    """
+    Run the matlab filter.
+    """
+    aliases = ['matlab']
+    filters_used = ['matlabint']
+
 class Cowsay(Template):
     """
     Run the cowsay filter with various options.
