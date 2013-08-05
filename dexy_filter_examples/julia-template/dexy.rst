@@ -1,3 +1,8 @@
+Julia Examples
+--------------
+
+The website for julia is `julialang <julialang.org>`__.
+
 Here is some julia code::
 
     {{ d['math.jl'] | indent(4) }}
