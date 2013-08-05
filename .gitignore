@@ -7,3 +7,5 @@ logs/
 *.swp
 build
 dist
+.cache/
+.dexy/

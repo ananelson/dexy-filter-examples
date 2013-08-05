@@ -1,5 +1,12 @@
 from dexy.template import Template
 
+class Julia(Template):
+    """
+    Run the julia filter.
+    """
+    aliases = ['julia']
+    filters_used = ['julia', 'jinja']
+
 class Cowsay(Template):
     """
     Run the cowsay filter with various options.
