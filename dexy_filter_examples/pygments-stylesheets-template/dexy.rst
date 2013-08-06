@@ -35,30 +35,16 @@ Here is an excerpt from the generated `.sty` file::
 
 You can also insert style definitions directly into the header of a document. Jinja has a `pygments` object which contains entries for each of the avaliable pygments styles, for html or latex.
 
-Here is how to include css::
+Here's an example of a HTML file which incorporates CSS and also lists the
+available styles::
 
-    {{ d['dexy.rst|idio|t']['pastie-css'] | indent(4) }}
+    {{ d['example.html'] | indent(4) }}
 
-{% if False -%}
-.. @export "pastie-css"
+This is run by passing the html through the jinja filter::
 
-{{ pygments['pastie.css'] }}
+    {{ d['dexy.yaml|idio|t']['jinja'] | indent(4) }}
 
-.. @end
-{% endif -%}
+Here is the resulting HTML::
 
-Here is a list of the available stylesheets:
-
-.. @export "list-stylesheets"
-
-{% for k in sorted(pygments) -%}
-- `{{ k }}`
-{% endfor %}
-
-
-.. @end
-
-Which we obtained by iterating over the `pygments` object::
-
-    {{ d['dexy.rst|idio|t']['list-stylesheets'] | indent(4) }}
+    {{ d['example.html|jinja'] | indent(4) }}
 

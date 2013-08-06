@@ -41,7 +41,7 @@ Custom formatter options can also be passed. Note that these options may be diff
 
 And here is the resulting HTML::
 
-    {{ d['hello.py|pyg|-noclasses'] | indent(4) }}
+    {{ str(d['hello.py|pyg|-noclasses']) | indent(4) }}
 
 As a reminder here is the default HTML again::
 

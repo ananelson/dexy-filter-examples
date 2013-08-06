@@ -1,4 +1,4 @@
-filter:
+filters:
     - .md
 ### @export "markdown"
     - example.md|markdown
@@ -9,9 +9,7 @@ filter:
     - table-example.md|markdown|-no-tables
 ### @export "table-example-enabled"
     - table-example.md|markdown:
-        - markdown: { 'tables' : {} }
+        - markdown: { extensions: { tables: {} } }
 ### @export "table-and-custom-toc-options"
     - table-and-toc-example.md|markdown:
-        - markdown:
-            tables : {}
-            toc : { anchorlink : true }
+        - markdown: { extensions: { tables: {}, toc: { anchorlink : true } } }

@@ -1,4 +1,6 @@
 filters:
+### @export "jinja"
+    - example.html|jinja
 ### @export "generate-css"
     - pastie.css|pyg:
         - pyg: { 'ext' : '.css' }
