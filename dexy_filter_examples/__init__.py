@@ -1,5 +1,11 @@
 from dexy.template import Template
 
+class Ditaa(Template):
+    """
+    Runs the ditaa filter.
+    """
+    aliases = ['ditaa']
+
 class Julia(Template):
     """
     Run the julia filter.
