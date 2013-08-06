@@ -1,11 +1,13 @@
 Julia Examples
 --------------
 
+{% from "dexy.jinja" import hl, ext with context -%}
+
 The website for julia is `julialang <http://julialang.org>`__.
 
-Here is some julia code::
+Here is some julia code:
 
-    {{ d['math.jl'] | indent(4) }}
+{{ hl(d['math.jl'], "julia") }}
 
 The `julia` filter runs code through the julia interpreter in batch mode::
 
