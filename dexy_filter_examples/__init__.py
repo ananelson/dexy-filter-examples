@@ -1,5 +1,11 @@
 from dexy.template import Template
 
+class Go(Template):
+    """
+    Runs the go filter.
+    """
+    aliases = ['go']
+
 class Ditaa(Template):
     """
     Runs the ditaa filter.
@@ -11,7 +17,7 @@ class Julia(Template):
     Run the julia filter.
     """
     aliases = ['julia']
-    filters_used = ['julia', 'jinja']
+    filters_used = ['julia']
 
 class Matlab(Template):
     """
