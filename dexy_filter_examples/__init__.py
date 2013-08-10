@@ -1,5 +1,11 @@
 from dexy.template import Template
 
+class Tidy(Template):
+    """
+    Runs various tidy templates.
+    """
+    aliases = ['tidy']
+
 class Go(Template):
     """
     Runs the go filter.
