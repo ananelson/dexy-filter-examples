@@ -9,7 +9,7 @@ Here is some go code:
 
 {{ hl(d['hello.go'], "go") }}
 
-The `go` filter runs code through the `go run` command:
+The `go` filter runs code through the 'go run' command::
 
     {{ d['dexy.yaml|idio|t']['go'] | indent(4) }}
 
@@ -24,3 +24,19 @@ Here is another example:
 And its output::
 
     {{ d['rand.go|go'] | indent(4) }}
+
+The `gotest` filter can only be applied to test files. It runs 'go test'. Here
+is an example of running gotest with a custom argument::
+
+    {{ d['dexy.yaml|idio|t']['gotest'] | indent(4) }}
+
+Here is the test we will run::
+
+    {{ d['silly_test.go'] | indent }}
+
+Here is the output from `gotest`::
+
+    {{ d['silly_test.go|gotest'] | indent }}
+
+If we ran this without `check-return-code` set to False, dexy would stop and
+notify you of the error.
