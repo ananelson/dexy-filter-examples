@@ -29,3 +29,16 @@ Here is the output::
 
     {{ d['script.sh|shint'] | indent(4) }}
 
+Normally, bash scripts run in a temporary working directory created and
+populated especially for the filter being run, but if you want to run a bash
+script which operates on your actual project directory, you can use the use-wd
+setting like this (this works on any of the bash-related filters)::
+
+    {{ d['dexy.yaml|idio']['whereami'] | indent(4) }}
+
+    {{ d['whereami.sh|shint'] | indent(4) }}
+
+The default behavior of running in a working directory is intended to allow you
+to work with dependencies which have already been processed by dexy, and it
+also is intended to protect your working directory from side effects of running
+your bash script.

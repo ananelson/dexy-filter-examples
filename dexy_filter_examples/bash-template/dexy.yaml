@@ -5,3 +5,7 @@ filters:
     - script.sh|sh
 ### "shint"
     - script.sh|shint
+### "whereami"
+    - whereami.sh|shint:
+        - shint: { 'use-wd' : False }
+        
