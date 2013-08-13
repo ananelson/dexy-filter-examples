@@ -30,9 +30,9 @@ is an example of running gotest with a custom argument::
 
     {{ d['dexy.yaml|idio|t']['gotest'] | indent(4) }}
 
-Here is the test we will run::
+Here is the test we will run:
 
-    {{ d['silly_test.go'] | indent }}
+{{ hl(d['silly_test.go'], 'go') }}
 
 Here is the output from `gotest`::
 

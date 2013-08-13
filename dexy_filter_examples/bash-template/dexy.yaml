@@ -1,0 +1,7 @@
+filters:
+### "bash"
+    - script.sh|bash
+### "sh"
+    - script.sh|sh
+### "shint"
+    - script.sh|shint

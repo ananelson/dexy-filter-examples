@@ -1,5 +1,11 @@
 from dexy.template import Template
 
+class Bash(Template):
+    """
+    Bash-related filter examples.
+    """
+    aliases = ['bash']
+
 class Tidy(Template):
     """
     Runs various tidy templates.
