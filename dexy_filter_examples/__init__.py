@@ -1,5 +1,26 @@
 from dexy.template import Template
 
+class Slides(Template):
+    """
+    slides
+    """
+    aliases = ['slides']
+    _settings = {
+            'copy-output-dir' : True
+            }
+
+class Ipynb(Template):
+    """
+    ipynb
+    """
+    aliases = ['ipynb']
+
+class IpynbCasper(Template):
+    """
+    ipynb casper
+    """
+    aliases = ['ipynbcasper']
+
 class Bash(Template):
     """
     Bash-related filter examples.
