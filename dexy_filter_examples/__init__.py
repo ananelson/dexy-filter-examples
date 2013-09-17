@@ -1,5 +1,23 @@
 from dexy.template import Template
 
+class Asciidoc(Template):
+    """
+    Asciidoc.
+    """
+    aliases = ['asciidoc']
+    _settings = {
+            'copy-output-dir' : True
+            }
+
+class Asciidoctor(Template):
+    """
+    Asciidoctor.
+    """
+    aliases = ['asciidoctor']
+    _settings = {
+            'copy-output-dir' : True
+            }
+
 class Slides(Template):
     """
     slides
