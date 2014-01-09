@@ -1,5 +1,11 @@
 from dexy.template import Template
 
+class Idio(Template):
+    """
+    Idio.
+    """
+    aliases = ['idio']
+
 class Asciidoc(Template):
     """
     Asciidoc.
